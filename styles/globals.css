@@ -8,7 +8,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #0c111b;
+	background: #0c111b;
+	scrollbar-width: 0px;
   
 }
 
@@ -147,3 +148,86 @@ a {
 }
 
 
+.followme {
+	writing-mode:sideways-lr;
+	color: #fff;
+	letter-spacing: 10px;
+	font-weight: 700;
+}
+
+#insta {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  border-radius: 25%;
+  /* font-size: 200px; change this to change the size */
+  
+}
+
+.main {
+	background-image: url('/wave-haikei.svg');
+	background-size: cover;	
+	/* width: 100vw; */
+	height: 100vh;
+}
+
+.home-info {
+	height: 70vh;
+}
+
+.profession {
+	color: #cecece;
+	font-size: large;
+	letter-spacing: 6px;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+
+.greeting {
+	color: #cecece;
+
+}
+
+.more {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	/* margin-top: 120px; */
+	padding-left: 60px;
+}
+
+.bio {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	/* padding-top: 40px; */
+	background-color: #a484d1;
+	margin-left: 120px;
+	border-radius: 20px;
+	opacity: 70%;
+	width: 300px;
+}
+
+.my-image {
+	/* display: flex; */
+	/* justify-content: center; */
+	overflow: hidden;
+	/* border-radius: 25px; */
+}
+.my-image  img {
+	flex-shrink: 0;
+	/* min-width: 100%; */
+	/* min-height: 100%; */
+	object-fit: contain;
+	width: 300px;
+  height: 300px;
+	border-radius: 50%;
+	
+}
+
+.bio-text {
+	padding: 20px;
+	text-align: center;
+	font-size: 25px;
+}
