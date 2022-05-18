@@ -8,7 +8,7 @@ import {
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link'
-import { Navbar } from './Navbar'
+// import { Navbar } from './Navbar'
 
 
 
@@ -50,15 +50,15 @@ export function Home() {
             <h1 className='profession text-md md:text-xl pl-6'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
           </div>
         </div>
-        <div className='bio pt-10 mt-6 flex flex-col items-center'>
-          <div className=' hidden lg:flex border-4 rounded-3xl border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={250} height={250} className=' rounded-3xl'/>
+        <div className='bio pt-10 mt-6 flex flex-col items-center max-h-min'>
+          <div className=' hidden lg:flex border-4 rounded-3xl overflow-hidden border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={250} height={250}/>
           </div>
-          <div className=' hidden md:flex lg:hidden border-4 rounded-3xl border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={200} height={200} className=' rounded-3xl'/>
+          <div className=' hidden md:flex lg:hidden border-4 rounded-3xl overflow-hidden border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={200} height={200}/>
           </div>
-          <div className=' md:hidden border-4 rounded-3xl border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={150} height={150} className=' rounded-3xl'/>
+          <div className=' md:hidden border-4 rounded-3xl overflow-hidden border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={250} height={250} />
           </div>
           <div className=' bio-text text-center text-white text-ml md:text-lg mt-8 max-w-xs md:max-w-sm'>WORK ETHICS PLAYS A MAJOR ROLE IN CAREER BUILDING</div>
           <div className='text-white text-2xl pt-8 pb-11 font-semibold '>Be Consistent</div>
