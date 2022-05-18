@@ -8,16 +8,20 @@ import {
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link'
+import { Navbar } from './Navbar'
 
 
 
 export function Home() {
+
+  
   return (
-    <div className=" flex">
-      <div className='pl-4 fixed'>
-        <div className='flex'>
+    <div className="flex"  id='home'>
+      
+      <div className='follow-con pl-4 z-50 mt-11 pt-11 w-auto fixed'>
+        <div className='flex mt-11'>
           <h1 className='followme mb-5'>Get In Touch</h1>
-          <div className=" h-60 w-0.5 bg-purple-400 mt-11 ml-1"></div>
+          <div className=" h-60 w-0.5 slant-line"></div>
         </div>
         <div className=' ml-3 mt-4 flex flex-col'>
           <Link href='https://twitter.com/aayushdeshmukh'>
@@ -38,26 +42,27 @@ export function Home() {
           <FontAwesomeIcon icon={faInstagram} id='insta' size='xl' beatFade className='mt-7' color='white' />
         </div>
       </div>
-      <div className="p-6 ml-11 mt-11 pl-11 flex flex-col justify-between home-info">
-        <div>
-          <h1 className="text-5xl greeting pl-6">Good To See You Here! 👋 </h1>
-          <h1 className=" text-7xl text-purple-400 pl-6">I am Aayush Deshmukh</h1>
-          <h1 className='profession'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
-        </div>
-        <div className='more'>
-          <h1 className='text-white'>Explore More</h1>
+      <div className=' home flex flex-col md:flex-row items-center md:items-start  align-top justify-evenly px-6'>
+        <div className="p-6 md:mt-11 md:pt-11 home-info">
           <div>
-            <FontAwesomeIcon icon={faArrowDown} color='#cecece' size='2x' beat className='ml-8'/>
+            <h1 className="text-lg md:text-5xl greeting pl-6">Good To See You Here! 👋 </h1>
+            <h1 className=" text-3xl md:text-7xl text-purple-900 pl-6">I am Aayush Deshmukh</h1>
+            <h1 className='profession text-md md:text-xl pl-6'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
           </div>
         </div>
-      </div>
-      <div className='bio'>
-        <div className='my-image'>
-          <img src='/myImage.jpeg' alt='Image'/>
+        <div className='bio pt-10 mt-6 flex flex-col items-center'>
+          <div className=' hidden lg:flex border-4 rounded-3xl border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={250} height={250} className=' rounded-3xl'/>
+          </div>
+          <div className=' hidden md:flex lg:hidden border-4 rounded-3xl border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={200} height={200} className=' rounded-3xl'/>
+          </div>
+          <div className=' md:hidden border-4 rounded-3xl border-purple-400'>
+            <Image src={'/1612944427160.jpg'} width={150} height={150} className=' rounded-3xl'/>
+          </div>
+          <div className=' bio-text text-center text-white text-ml md:text-lg mt-8 max-w-xs md:max-w-sm'>WORK ETHICS PLAYS A MAJOR ROLE IN CAREER BUILDING</div>
+          <div className='text-white text-2xl pt-8 pb-11 font-semibold '>Be Consistent</div>
         </div>
-        <p className=' bio-text text-lg'>
-          Work ethics plays a major role <br /> in career building
-        </p>
       </div>
     </div>
   )

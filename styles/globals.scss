@@ -1,0 +1,819 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=optional');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+	background: #0c111b;
+  // width: 100%;
+  // height: 100%;
+  /* overflow: hidden; */
+	overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+	overflow-x: scroll;
+	// background-image: url('/blurry-gradient-haikei(1).svg');
+	// background-size: cover;
+}
+body::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
+}
+
+
+.toggle-bg:after {
+  content: '';
+  @apply absolute top-0.5 left-0.5 bg-white border border-gray-300 rounded-full h-5 w-5 transition shadow-sm;
+}
+
+input:checked + .toggle-bg:after {
+  transform: translateX(100%);
+  @apply border-white;
+}
+
+input:checked + .toggle-bg {
+  @apply bg-purple-600 border-purple-600;
+}
+
+.main{
+  padding: 0;
+  margin: 0;
+	// background: #0c111b;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+	overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+	overflow-x: scroll;
+	background-image: url('/blurry-gradient-haikei(1).svg');
+	background-size: cover;
+}
+
+
+
+.main::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.portfolio-logo {
+  /* font-family: 'Indie Flower', cursive; */
+  /* font-size: 42px; */
+  letter-spacing: 1px;
+  font-weight: bold;
+  
+}
+
+.navbar {
+	box-sizing: border-box;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    // position: sticky;
+		/* height: 20vh; */
+    background-color: transparent;
+    
+    transition: 0.8s all ease-out;
+    
+}
+
+.menu__icon.cloChange {
+  background-color: rgba(211, 119, 219);
+}
+
+.navbar.colorChange{
+  box-sizing: border-box;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    // position: sticky;
+  background-color: rgba(211, 119, 219);
+}
+
+.pages-nav {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 20px;
+	text-align: center;
+	/* background: #0e0f0f; */
+  
+}
+
+.js .pages-nav {
+	/* position: absolute; */
+	/* top: 0; */
+	/* left: 0; */
+	width: 100%;
+	height: 50vh;
+	padding: 30px;
+	pointer-events: none;
+	opacity: 0;
+	background: transparent;
+	-webkit-transition: -webkit-transform 1.2s, opacity 1.2s;
+	transition: transform 1.2s, opacity 1.2s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transform: translate3d(0, 150px, 0);
+	transform: translate3d(0, 150px, 0);
+}
+
+.js .pages-nav--open {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.pages-nav__item {
+	/* width: 33%; */
+	padding: 1em;
+}
+
+.js .pages-nav__item {
+	padding: 0 10%;
+}
+
+.pages-nav .pages-nav__item--social {
+	width: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 1.2s, opacity 1.2s;
+	transition: transform 1.2s, opacity 1.2s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
+}
+
+.pages-nav--open .pages-nav__item--social {
+	opacity: 1;
+	-webkit-transition-delay: 0.35s;
+	transition-delay: 0.35s;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.link {
+	font-size: 1.2em;
+	font-weight: bold;
+	position: relative;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.link:hover,
+.link:focus {
+	color: #fff;
+}
+
+.link--page {
+	display: block;
+	color: #cecece;
+}
+
+.link--page:not(.link--faded)::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 30px;
+	height: 2px;
+	margin: 5px 0 0 -15px;
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: scale3d(0, 1, 1);
+	transform: scale3d(0, 1, 1);
+}
+
+.link--page:hover:before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+.link--faded {
+	color: #4f4f64;
+}
+
+.link--faded:hover,
+.link--faded:focus {
+	color: #5c5edc;
+}
+
+.link--page.link--faded {
+	font-size: 0.65em;
+}
+
+.slant-line {
+  background-color: rgba(211, 119, 219, 0.97);
+}
+
+.followme {
+	writing-mode:vertical-rl;
+	color: #fff;
+	letter-spacing: 10px;
+	font-weight: 700;
+  transform: rotate(180deg);
+}
+
+.follow-con {
+  z-index: 9999999;
+
+}
+
+#insta {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  border-radius: 25%;
+  /* font-size: 200px; change this to change the size */
+  
+}
+
+.home {
+	
+	/* width: 100vw; */
+	min-height: 80vh;
+	min-width: 99vw;
+	margin-top: 20vh;
+	/* padding-top: 200px; */
+	position: sticky;
+  position: -webkit-sticky;
+	
+}
+
+
+
+.profession {
+	color: #cecece;
+	/* font-size: large; */
+	letter-spacing: 6px;
+	padding-top: 20px;
+}
+
+.greeting {
+	color: #cecece;
+
+}
+
+.more {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	/* margin-top: 120px; */
+	padding-left: 60px;
+}
+
+.bio {
+	/* From https://css.glass */
+	background: rgba(160, 80, 169, 0.19);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(12.5px);
+	-webkit-backdrop-filter: blur(12.5px);
+	border: 1px solid rgba(160, 80, 169, 0.19);
+	// background-image: url('/wave-haikei.svg');
+	// background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bio-text {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	/* width: 190px; */
+	font-weight: 600;
+}
+
+#projects {
+	// height: 80vh;
+	position: sticky;
+  position: -webkit-sticky;
+	margin-top: 20vh;
+}
+
+#skills {
+	// height: 150vh;
+	position: sticky;
+  position: -webkit-sticky;
+	margin-top: 20vh;
+	// margin-bottom: 60vh;
+}
+
+#contact {
+  position: sticky;
+  position: -webkit-sticky;
+	margin-top: 20vh;
+}
+
+.project {
+	/* From https://css.glass */
+	backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(56, 32, 58, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.project-heading {
+	/* writing-mode:sideways-lr; */
+	color: #fff;
+	letter-spacing: 10px;
+	font-weight: 700;
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	
+}
+
+.contact-heading {
+	/* writing-mode:sideways-lr; */
+	color: #fff;
+	letter-spacing: 10px;
+	font-weight: 700;
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	
+}
+
+.project-heading:hover {
+	letter-spacing: 40px;
+	
+}
+
+.contact-heading:hover {
+	letter-spacing: 15px;
+	
+}
+
+.input-box {
+  transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+
+.input-box::after {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+$font-family: 'PT Sans', sans-serif;
+
+$li-padding: 5px;
+
+// colors
+$background-color: #1a1a1a;
+$progressbar-title-color: #fff;
+
+$red: #c0392b;
+$blue: #1199ff;
+$purple: #9b59b6;
+$orange: #ffa500;
+$green: #27ae60;
+
+$animation-delay: .7s;
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+
+
+.skills-bar-container{
+  position: relative;
+  width: 40%;
+  min-width: 300px;
+  // top: 50%;
+  // left: 50%;
+  // -webkit-transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
+  list-style:none;
+  
+  li{
+    position: relative;
+    width: 100%;
+    padding: $li-padding;
+    margin-bottom: 10px;
+    
+    .progressbar-title{
+      color: $progressbar-title-color;
+      
+      h3{
+        display: inline-block;
+				font-weight: bold;
+				font-size: large;
+      }
+      .percent{
+        position: absolute;
+        right: $li-padding;
+      }
+    }// end progressbar-title
+    
+    .bar-container{
+      background: #555;
+      position: relative;
+      width: 100%;
+      height: 5px;
+      margin-top: 5px;
+      display: block;
+      @include border-radius(5px);
+      
+      .progressbar{
+        position:absolute;
+        width:0%;
+        height: 100%;
+        @include border-radius(5px);
+
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+      #progress-html{
+        -webkit-animation-name: progress-html;
+        animation-name: progress-html;
+        -webkit-animation-delay: $animation-delay;
+        animation-delay: $animation-delay;
+      }
+
+      #progress-css{
+        -webkit-animation-name: progress-css;
+        animation-name: progress-css;
+        -webkit-animation-delay: $animation-delay*2;
+        animation-delay: $animation-delay*2;
+      }
+
+      #progress-javascript{
+        -webkit-animation-name: progress-javascript;
+        animation-name: progress-javascript;
+        -webkit-animation-delay:$animation-delay*3;
+        animation-delay: $animation-delay*3;
+      }
+
+      #progress-python{
+        -webkit-animation-name: progress-python;
+        animation-name: progress-python;
+        -webkit-animation-delay: $animation-delay*4;
+        animation-delay: $animation-delay*4;
+      }
+
+      #progress-c{
+        -webkit-animation-name: progress-c;
+        animation-name: progress-c;
+        -webkit-animation-delay: $animation-delay*5;
+        animation-delay: $animation-delay*5;
+      }
+
+			#progress-react{
+        -webkit-animation-name: progress-react;
+        animation-name: progress-react;
+        -webkit-animation-delay: $animation-delay*6;
+        animation-delay: $animation-delay*6;
+      }
+
+			#progress-node{
+        -webkit-animation-name: progress-node;
+        animation-name: progress-node;
+        -webkit-animation-delay: $animation-delay*7;
+        animation-delay: $animation-delay*7;
+      }
+
+			#progress-reactnative{
+        -webkit-animation-name: progress-reactnative;
+        animation-name: progress-reactnative;
+        -webkit-animation-delay: $animation-delay*8;
+        animation-delay: $animation-delay*8;
+      }
+
+			#progress-material{
+        -webkit-animation-name: progress-material;
+        animation-name: progress-material;
+        -webkit-animation-delay: $animation-delay*9;
+        animation-delay: $animation-delay*9;
+      }
+
+			#progress-tailwind{
+        -webkit-animation-name: progress-tailwind;
+        animation-name: progress-tailwind;
+        -webkit-animation-delay: $animation-delay*10;
+        animation-delay: $animation-delay*10;
+      }
+
+			#progress-solidity{
+        -webkit-animation-name: progress-solidity;
+        animation-name: progress-solidity;
+        -webkit-animation-delay: $animation-delay*11;
+        animation-delay: $animation-delay*11;
+      }
+
+			#progress-mongo{
+        -webkit-animation-name: progress-mongo;
+        animation-name: progress-mongo;
+        -webkit-animation-delay: $animation-delay*12;
+        animation-delay: $animation-delay*12;
+      }
+
+			#progress-mysql{
+        -webkit-animation-name: progress-mysql;
+        animation-name: progress-mysql;
+        -webkit-animation-delay: $animation-delay*13;
+        animation-delay: $animation-delay*13;
+      }
+
+			#progress-git{
+        -webkit-animation-name: progress-git;
+        animation-name: progress-git;
+        -webkit-animation-delay: $animation-delay*14;
+        animation-delay: $animation-delay*14;
+      }
+
+			#progress-latex{
+        -webkit-animation-name: progress-latex;
+        animation-name: progress-latex;
+        -webkit-animation-delay: $animation-delay*15;
+        animation-delay: $animation-delay*15;
+      }
+    }// end bar-container
+  }
+}
+
+.progressred{background-color:$red;}
+.progressblue{background-color:$blue;}
+.progresspurple{background-color:$purple;}
+.progressorange{background-color:$orange;}
+.progressgreen{background-color:$green;}
+
+@-webkit-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@-webkit-keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
+@-webkit-keyframes progress-javascript{0%{width: 0%;} 100%{ width: 100%;}}
+@-webkit-keyframes progress-python{0%{width: 0%;} 100%{ width: 70%;}}
+@-webkit-keyframes progress-c{0%{width: 0%;} 100%{ width: 80%;}}
+@-webkit-keyframes progress-react{0%{width: 0%;} 100%{ width: 90%;}}
+// @-webkit-keyframes progress-react{0%{width: 0%;} 100%{ width: 90%;}}
+@-webkit-keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
+@-webkit-keyframes progress-reactnative{0%{width: 0%;} 100%{ width: 70%;}}
+@-webkit-keyframes progress-material{0%{width: 0%;} 100%{ width: 90%;}}
+@-webkit-keyframes progress-tailwind{0%{width: 0%;} 100%{ width: 90%;}}
+@-webkit-keyframes progress-solidity{0%{width: 0%;} 100%{ width: 60%;}}
+@-webkit-keyframes progress-mongo{0%{width: 0%;} 100%{ width: 80%;}}
+@-webkit-keyframes progress-mysql{0%{width: 0%;} 100%{ width: 70%;}}
+@-webkit-keyframes progress-git{0%{width: 0%;} 100%{ width: 90%;}}
+@-webkit-keyframes progress-latex{0%{width: 0%;} 100%{ width: 100%;}}
+
+@-moz-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@-moz-keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-javascript{0%{width: 0%;} 100%{ width: 100%;}}
+@-moz-keyframes progress-python{0%{width: 0%;} 100%{ width: 70%;}}
+@-moz-keyframes progress-c{0%{width: 0%;} 100%{ width: 80%;}}
+@-moz-keyframes progress-react{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
+@-moz-keyframes progress-reactnative{0%{width: 0%;} 100%{ width: 70%;}}
+@-moz-keyframes progress-material{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-tailwind{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-solidity{0%{width: 0%;} 100%{ width: 60%;}}
+@-moz-keyframes progress-mongo{0%{width: 0%;} 100%{ width: 80%;}}
+@-moz-keyframes progress-mysql{0%{width: 0%;} 100%{ width: 70%;}}
+@-moz-keyframes progress-git{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-latex{0%{width: 0%;} 100%{ width: 100%;}}
+
+@keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-javascript{0%{width: 0%;} 100%{ width: 100%;}}
+@keyframes progress-python{0%{width: 0%;} 100%{ width: 70%;}}
+@keyframes progress-c{0%{width: 0%;} 100%{ width: 80%;}}
+@keyframes progress-react{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-react{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
+@keyframes progress-reactnative{0%{width: 0%;} 100%{ width: 70%;}}
+@keyframes progress-material{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-tailwind{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-solidity{0%{width: 0%;} 100%{ width: 60%;}}
+@keyframes progress-mongo{0%{width: 0%;} 100%{ width: 80%;}}
+@keyframes progress-mysql{0%{width: 0%;} 100%{ width: 70%;}}
+@keyframes progress-git{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-latex{0%{width: 0%;} 100%{ width: 100%;}}
+
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(56, 32, 58, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.nav {
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.newnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(211, 119, 219);
+  // z-index: 50;
+  padding-top: 100px;
+}
+
+
+
+.menu__icon {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.menu__icon div {
+  border-radius: 2px;
+  height: 6px;
+  background-color: #ffffff;
+  z-index: 9999999;
+}
+
+.menu__icon div:nth-child(2) {
+  margin: 6px 0;
+}
+
+.menu__icon.active div:nth-child(1) {
+  animation: menuAnim1 0.3s ease-in-out forwards;
+  background-color: #ffffff;
+  z-index: 9999999;
+}
+.menu__icon.active div:nth-child(2) {
+  animation: menuAnim2 0.3s ease-in-out forwards;
+  background-color: #ffffff;
+  z-index: 9999999;
+}
+.menu__icon.active div:nth-child(3) {
+  animation: menuAnim3 0.3s ease-in-out forwards;
+  background-color: #ffffff;
+  z-index: 9999999;
+}
+.menu__icon.inactive div:nth-child(1) {
+  animation: revmenuAnim1 0.3s ease-in-out;
+}
+.menu__icon.inactive div:nth-child(2) {
+  animation: revmenuAnim2 0.3s ease-in-out;
+}
+.menu__icon.inactive div:nth-child(3) {
+  animation: revmenuAnim3 0.3s ease-in-out;
+}
+
+@keyframes menuAnim1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(12px) rotateZ(45deg);
+  }
+}
+@keyframes menuAnim2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes menuAnim3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(-12px) rotateZ(135deg);
+  }
+}
+
+@keyframes revmenuAnim1 {
+  0% {
+    transform: translateY(12px) rotateZ(45deg);
+  }
+
+  70% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+}
+@keyframes revmenuAnim2 {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes revmenuAnim3 {
+  0% {
+    transform: translateY(-12px) rotateZ(135deg);
+  }
+
+  70% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0) rotateZ(0);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 288px;
+  height: calc(100vh - 76px); /* my header height was 76px */
+  right: -288px;
+  top: 76px;
+  padding: 24px 16px;
+  row-gap: 16px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.menu.active {
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    column-gap: 24px;
+    position: unset;
+    width: fit-content;
+    height: fit-content;
+  }
+  .nav__item::after {
+    position: absolute;
+    content: "";
+    bottom: -26px;
+    width: 0%;
+    left: 0;
+    height: 6px;
+    background-color: black;
+    transition: all 0.2s;
+  }
+
+  .nav__item:hover::after,
+  .nav__item.active::after {
+    width: 100%;
+  }
+}
