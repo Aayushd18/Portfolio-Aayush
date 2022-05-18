@@ -39,7 +39,11 @@ export function Home() {
               <FontAwesomeIcon icon={faLinkedin} color='#0976b4' size='xl' beatFade className='mt-7' />
             </a>
           </Link>
-          <FontAwesomeIcon icon={faInstagram} id='insta' size='xl' beatFade className='mt-7' color='white' />
+          <Link href='https://www.instagram.com/aayush1807/'>
+            <a>
+              <FontAwesomeIcon icon={faInstagram} id='insta' size='xl' beatFade className='mt-7' color='white' />
+            </a>
+          </Link>
         </div>
       </div>
       <div className=' home flex flex-col md:flex-row items-center md:items-start  align-top justify-evenly px-6'>
