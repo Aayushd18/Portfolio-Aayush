@@ -51,7 +51,7 @@ input:checked + .toggle-bg {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
 	overflow-x: scroll;
-	background-image: url('/blurry-gradient-haikei(1).svg');
+	background-image: url('/wave-haikei.svg');
 	background-size: cover;
 }
 
@@ -474,6 +474,7 @@ $animation-delay: .7s;
         animation-name: progress-html;
         -webkit-animation-delay: $animation-delay;
         animation-delay: $animation-delay;
+        -mox-animation-delay: $animation-delay;
       }
 
       #progress-css{
@@ -481,6 +482,7 @@ $animation-delay: .7s;
         animation-name: progress-css;
         -webkit-animation-delay: $animation-delay*2;
         animation-delay: $animation-delay*2;
+        -mox-animation-delay: $animation-delay*2;
       }
 
       #progress-javascript{
@@ -488,6 +490,7 @@ $animation-delay: .7s;
         animation-name: progress-javascript;
         -webkit-animation-delay:$animation-delay*3;
         animation-delay: $animation-delay*3;
+        -mox-animation-delay: $animation-delay*3;
       }
 
       #progress-python{
@@ -495,6 +498,7 @@ $animation-delay: .7s;
         animation-name: progress-python;
         -webkit-animation-delay: $animation-delay*4;
         animation-delay: $animation-delay*4;
+        -mox-animation-delay: $animation-delay*4;
       }
 
       #progress-c{
@@ -502,6 +506,7 @@ $animation-delay: .7s;
         animation-name: progress-c;
         -webkit-animation-delay: $animation-delay*5;
         animation-delay: $animation-delay*5;
+        -mox-animation-delay: $animation-delay*5;
       }
 
 			#progress-react{
@@ -509,6 +514,7 @@ $animation-delay: .7s;
         animation-name: progress-react;
         -webkit-animation-delay: $animation-delay*6;
         animation-delay: $animation-delay*6;
+        -mox-animation-delay: $animation-delay*6;
       }
 
 			#progress-node{
@@ -516,6 +522,7 @@ $animation-delay: .7s;
         animation-name: progress-node;
         -webkit-animation-delay: $animation-delay*7;
         animation-delay: $animation-delay*7;
+        -mox-animation-delay: $animation-delay*7;
       }
 
 			#progress-reactnative{
@@ -523,6 +530,7 @@ $animation-delay: .7s;
         animation-name: progress-reactnative;
         -webkit-animation-delay: $animation-delay*8;
         animation-delay: $animation-delay*8;
+        -mox-animation-delay: $animation-delay*8;
       }
 
 			#progress-material{
@@ -530,6 +538,7 @@ $animation-delay: .7s;
         animation-name: progress-material;
         -webkit-animation-delay: $animation-delay*9;
         animation-delay: $animation-delay*9;
+        -mox-animation-delay: $animation-delay*9;
       }
 
 			#progress-tailwind{
@@ -537,6 +546,7 @@ $animation-delay: .7s;
         animation-name: progress-tailwind;
         -webkit-animation-delay: $animation-delay*10;
         animation-delay: $animation-delay*10;
+        -mox-animation-delay: $animation-delay*10;
       }
 
 			#progress-solidity{
@@ -544,6 +554,7 @@ $animation-delay: .7s;
         animation-name: progress-solidity;
         -webkit-animation-delay: $animation-delay*11;
         animation-delay: $animation-delay*11;
+        -mox-animation-delay: $animation-delay*11;
       }
 
 			#progress-mongo{
@@ -551,12 +562,14 @@ $animation-delay: .7s;
         animation-name: progress-mongo;
         -webkit-animation-delay: $animation-delay*12;
         animation-delay: $animation-delay*12;
+        -mox-animation-delay: $animation-delay*12;
       }
 
 			#progress-mysql{
         -webkit-animation-name: progress-mysql;
         animation-name: progress-mysql;
         -webkit-animation-delay: $animation-delay*13;
+        -mox-animation-delay: $animation-delay*13;
         animation-delay: $animation-delay*13;
       }
 
@@ -564,6 +577,7 @@ $animation-delay: .7s;
         -webkit-animation-name: progress-git;
         animation-name: progress-git;
         -webkit-animation-delay: $animation-delay*14;
+        -mox-animation-delay: $animation-delay*14;
         animation-delay: $animation-delay*14;
       }
 
@@ -571,6 +585,7 @@ $animation-delay: .7s;
         -webkit-animation-name: progress-latex;
         animation-name: progress-latex;
         -webkit-animation-delay: $animation-delay*15;
+        -mox-animation-delay: $animation-delay*15;
         animation-delay: $animation-delay*15;
       }
     }// end bar-container
