@@ -63,9 +63,9 @@ export default function Contact() {
           </div>
           <div className="flex items-center justify-center">
             <Link href='https://www.google.com/gmail/' target='_blank'>
-              <a>
+              <a className="text-white font-semibold mt-6 text-center">
                 <FontAwesomeIcon icon={faGoogle} color='red' size='xl' className='mt-7 mr-3' />
-                <span className="text-white font-semibold mt-6 text-center">Email :- deshmukhaayush81@gmail.com</span>
+                <span >Email :- deshmukhaayush81@gmail.com</span>
               </a>
             </Link>
           </div>
