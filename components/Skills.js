@@ -5,7 +5,7 @@ const skill_data = [
 ]
 export default function Skills() {
   return (
-    <div className="flex flex-col items-center ml-11 pr-7" id="skills">
+    <div className="flex flex-col items-center ml-11 pl-2 pr-7" id="skills">
       <div className='flex flex-col items-center justify-center mb-11'>
         <h1 className='project-heading text-3xl ml-5 mb-5'>SKILLS</h1>
         <div className=" h-0.5 w-64 bg-purple-400 "></div>

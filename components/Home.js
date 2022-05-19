@@ -54,7 +54,7 @@ export function Home() {
             <h1 className='profession text-md md:text-xl pl-6'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
           </div>
         </div>
-        <div className='bio pt-10 mt-6 flex flex-col items-center'>
+        <div className='bio pt-10 mt-6 flex ml-6 flex-col items-center'>
           <div className=' hidden lg:flex border-4 rounded-3xl overflow-hidden border-purple-400'>
             <Image src={'/1612944427160.jpg'} width={250} height={250}/>
           </div>
