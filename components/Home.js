@@ -50,7 +50,7 @@ export function Home() {
         <div className="p-6 md:mt-11 md:pt-11 home-info">
           <div>
             <h1 className="text-lg md:text-5xl greeting pl-6">Good To See You Here! 👋 </h1>
-            <h1 className=" text-3xl md:text-7xl text-purple-900 pl-6">I am Aayush Deshmukh</h1>
+            <h1 className=" text-3xl md:text-7xl text-purple-400 pl-6">I am Aayush Deshmukh</h1>
             <h1 className='profession text-md md:text-xl pl-6'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
           </div>
         </div>
