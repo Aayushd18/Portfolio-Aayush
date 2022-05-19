@@ -56,13 +56,13 @@ export function Home() {
         </div>
         <div className='bio pt-10 mt-6 flex ml-9 flex-col items-center'>
           <div className=' hidden lg:flex border-4 rounded-3xl overflow-hidden border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={250} height={250}/>
+            <Image src={'/aayush.jpeg'} width={250} height={250}/>
           </div>
           <div className=' hidden md:flex lg:hidden border-4 rounded-3xl overflow-hidden border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={200} height={200}/>
+            <Image src={'/aayush.jpeg'} width={200} height={200}/>
           </div>
           <div className=' md:hidden border-4 rounded-3xl overflow-hidden border-purple-400'>
-            <Image src={'/1612944427160.jpg'} width={150} height={150} />
+            <Image src={'/aayush.jpeg'} width={150} height={150} />
           </div>
           <div className=' bio-text text-center text-white text-ml md:text-lg mt-8 max-w-xs md:max-w-sm'>WORK ETHICS PLAYS A MAJOR ROLE IN CAREER BUILDING</div>
           <div className='text-white text-2xl pt-8 pb-11 font-semibold '>Be Consistent</div>
