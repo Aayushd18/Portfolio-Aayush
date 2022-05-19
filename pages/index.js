@@ -13,15 +13,15 @@ import Skills from '../components/Skills';
 
 export default function Main() {
 
-  const [colorTheme, setTheme] = useState(false);
+  
   return (
-    <div className={`${ colorTheme ? "darkmode main" : "lightmode main" }`}>
+    <div className="main">
       <Head>
         <title>Portfolio | Aayush</title>
         <meta name="description" content="Portfolio website" />
         <link rel="icon" href="/logo-removebg-preview.png" />
       </Head>
-      <Navbar colorTheme={colorTheme} setTheme={setTheme} />
+      
       <Home />
       <Skills />
       <Projects />
