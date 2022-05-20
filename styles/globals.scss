@@ -840,3 +840,20 @@ $animation-delay: .7s;
   background-color: #333333;
 }
 
+@media screen and (max-width: 299px) {
+  .glyphicon {
+      font-size: 0.5em;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+  .glyphicon {
+      font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .glyphicon {
+      font-size: 1.5em;
+  }
+}

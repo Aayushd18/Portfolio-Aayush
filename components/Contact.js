@@ -58,14 +58,14 @@ export default function Contact() {
           
           <div className="flex items-center justify-center">
             
-                <FontAwesomeIcon icon={faPhoneAlt} color='lightpink' size='xl' className='mt-7 mr-3' />
+                <FontAwesomeIcon icon={faPhoneAlt} color='lightpink'  className='mt-7 mr-3 glyphicon' />
                 <span className="text-sm md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
           </div>
           <div className="flex items-center justify-center">
             <Link href='https://www.google.com/gmail/' target='_blank'>
               <a className="text-white font-semibold mt-3 text-center">
                 
-                <FontAwesomeIcon icon={faGoogle} color='lightpink' size='xl' className='mt-7 mr-3' />
+                <FontAwesomeIcon icon={faGoogle} color='lightpink'  className='mt-7 mr-3 glyphicon' />
                 <span className=" text-sm md:text-lg" >Email :- deshmukhaayush81@gmail.com</span>
               </a>
             </Link>
