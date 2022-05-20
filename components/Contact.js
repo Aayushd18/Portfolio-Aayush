@@ -53,19 +53,20 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className="bio p-4 lg:p-6 lg:p-11  mt-6 lg:pt-11 lg:ml-11 w-12/12 lg:w-6/12 lg:mr-11">
+        <div className="bio p-4 lg:p-11  mt-6 lg:pt-11 lg:ml-11 w-12/12 lg:w-6/12 lg:mr-11">
           <h1 className=" font-bold text-3xl text-purple-900 border-b-2 pb-2 text-center">Contact Me @</h1>
           
           <div className="flex items-center justify-center">
             
-                <FontAwesomeIcon icon={faPhoneAlt} color='red' size='xl' className='mt-7 mr-3' />
-                <span className="text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
+                <FontAwesomeIcon icon={faPhoneAlt} color='lightpink' size='xl' className='mt-7 mr-3' />
+                <span className="text-sm md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
           </div>
           <div className="flex items-center justify-center">
             <Link href='https://www.google.com/gmail/' target='_blank'>
-              <a className="text-white font-semibold mt-6 text-center">
-                <FontAwesomeIcon icon={faGoogle} color='red' size='xl' className='mt-7 mr-3' />
-                <span >Email :- deshmukhaayush81@gmail.com</span>
+              <a className="text-white font-semibold mt-3 text-center">
+                
+                <FontAwesomeIcon icon={faGoogle} color='lightpink' size='xl' className='mt-7 mr-3' />
+                <span className=" text-sm md:text-lg" >Email :- deshmukhaayush81@gmail.com</span>
               </a>
             </Link>
           </div>
