@@ -57,24 +57,39 @@ export default function Contact() {
               </Fade>
             </form>
         </div>
-        <div className="bio p-4 lg:p-11  mt-6 lg:pt-11 lg:ml-11 w-12/12 lg:w-6/12 lg:mr-11">
+        <div className="bio hidden md:block p-4 lg:p-11  mt-6 lg:pt-11 lg:ml-11 w-12/12 lg:w-6/12 lg:mr-11">
           <Slide direction="up">
 
             <h1 className=" font-bold text-3xl text-purple-900 border-b-2 pb-2 text-center">Contact Me @</h1>
             
-            <div className="flex items-center md:justify-center justify-start">
-              <div className="hidden md:block">
-                <FontAwesomeIcon icon={faPhoneAlt} color='lightpink'  className='mt-7 mr-3 glyphicon' />
-              </div>
-              <span className="text-sm md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
+            <div className="flex items-center justify-center">
+              
+                  <FontAwesomeIcon icon={faPhoneAlt} color='lightpink'  className='mt-7 mr-3 glyphicon' />
+                  <span className="text-sm md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
             </div>
-            <div className="flex items-center md:justify-center justify-start mt-4">
-              <div className=" hidden md:block">
-                <FontAwesomeIcon icon={faGoogle} color='lightpink'  className='mr-3 glyphicon' />
-              </div>
+            <div className="flex items-center justify-center">
               <Link href='https://www.google.com/gmail/' target='_blank'>
-                <a className="text-white font-semibold">
+                <a className="text-white font-semibold mt-3 text-center">
+                  <FontAwesomeIcon icon={faGoogle} color='lightpink'  className='mt-7 mr-3 glyphicon' />
                   <span className=" text-sm md:text-lg" >Email :- deshmukhaayush81@gmail.com</span>
+                </a>
+              </Link>
+            </div>
+          </Slide>
+        </div>
+
+        <div className="bio md:hidden p-4 lg:p-11  mt-6 lg:pt-11 lg:ml-11 w-12/12 lg:w-6/12 lg:mr-11">
+          <Slide direction="up">
+
+            <h1 className=" font-bold text-3xl text-purple-900 border-b-2 pb-2 text-center">Contact Me @</h1>
+            
+            <div className="flex items-center justify-center">
+                  <span className="text-xs md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <Link href='https://www.google.com/gmail/' target='_blank'>
+                <a className="text-white font-semibold mt-3 text-center">
+                  <span className=" text-xs md:text-lg" >Email :- deshmukhaayush81@gmail.com</span>
                 </a>
               </Link>
             </div>
