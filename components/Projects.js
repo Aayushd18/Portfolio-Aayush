@@ -43,7 +43,7 @@ export default function Projects() {
         <div className=" h-0.5 w-64 bg-purple-400 "></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <Slide direction="right" cascade delay={200}>
+        <Slide direction="right" cascade delay={200} triggerOnce>
 
           {projectsData.map((item, index) => (
             <div className="project max-w-sm rounded flex flex-col justify-between overflow-hidden shadow-lg bg-white mx-4 pb-5" key={index}>
