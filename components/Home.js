@@ -74,7 +74,7 @@ export function Home() {
             <div className=' md:hidden border-4 rounded-3xl overflow-hidden border-purple-400'>
               <Image src={'/aayush.jpeg'} width={150} height={150} />
             </div>
-            <div className=' bio-text text-center text-white text-ml md:text-lg mt-8 max-w-xs md:max-w-sm'>WORK ETHICS PLAYS A MAJOR ROLE IN CAREER BUILDING</div>
+            <div className=' bio-text text-center text-white text-md md:text-lg px-5 md:px-2 mt-8 max-w-xs md:max-w-sm'>WORK ETHICS PLAYS A MAJOR ROLE IN CAREER BUILDING</div>
             <div className='text-white text-2xl pt-8 pb-11 font-semibold '>Be Consistent</div>
           </div>
         </Slide>

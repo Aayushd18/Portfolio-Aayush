@@ -11,7 +11,7 @@ export default function Skills() {
         <div className=" h-0.5 w-64 bg-purple-400 "></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-11">
-      <Zoom cascade>
+      <Zoom cascade delay={0}>
 
         <div>
           <ul className="skills-bar-container">
