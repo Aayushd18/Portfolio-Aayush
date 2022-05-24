@@ -1,3 +1,4 @@
+import { Fade, Slide, JackInTheBox, Reveal, Bounce, Rotate, Hinge, AttentionSeeker } from "react-awesome-reveal";
 export default function Projects() {
 
   const projectsData = [
@@ -42,26 +43,29 @@ export default function Projects() {
         <div className=" h-0.5 w-64 bg-purple-400 "></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {projectsData.map((item, index) => (
-          <div className="project max-w-sm rounded flex flex-col justify-between overflow-hidden shadow-lg bg-white mx-4 pb-5" key={index}>
-            <div className="p-6">
-              <img width={400} height={400} src={item.img} alt="Sunset in the mountains" />
-            </div>
-            <div>
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2" style={{color: '#cecece'}}>{item.title}</div>
-                <p className="text-white font-semibold text-base">
-                  {item.details}
-                </p>
+        <Slide direction="right" cascade delay={200}>
+
+          {projectsData.map((item, index) => (
+            <div className="project max-w-sm rounded flex flex-col justify-between overflow-hidden shadow-lg bg-white mx-4 pb-5" key={index}>
+              <div className="p-6">
+                <img width={400} height={400} src={item.img} alt="Sunset in the mountains" />
               </div>
-              <div className="px-6 pt-4 pb-2">
-                {item.tags.map((tag, i) => (
-                  <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
-                ))}
+              <div>
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2" style={{color: '#cecece'}}>{item.title}</div>
+                  <p className="text-white font-semibold text-base">
+                    {item.details}
+                  </p>
+                </div>
+                <div className="px-6 pt-4 pb-2">
+                  {item.tags.map((tag, i) => (
+                    <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Slide>
       </div>
     </div>
   )

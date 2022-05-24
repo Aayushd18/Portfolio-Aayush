@@ -3,6 +3,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Image from "next/image"
 import { Newnav } from '../components/Newnav';
 import React, { useState } from "react";
+import { Fade, Slide, JackInTheBox, Reveal, Zoom } from "react-awesome-reveal";
 
 
 
@@ -35,7 +36,7 @@ export function Navbar({ colorTheme, setTheme }) {
   }, []);
   
   return (
-    <nav  className={colorChange ? 'navbar colorChange rounded-b-xl' : 'navbar rounded-b-xl'}>
+    <nav  className={colorChange ? 'navbar colorChange shadow-xl rounded-b-xl' : 'navbar rounded-b-xl'}>
       <div className="flex flex-row justify-between rounded-b-xl" >
         <div className="align-top">
           <h1 className="portfolio-logo p-6 mx-5 lg:mx-10 text-white md:text-3xl text-xl">PORTFOLIO | Explore</h1>
@@ -61,7 +62,10 @@ export function Navbar({ colorTheme, setTheme }) {
         </div>
         <div className="visible md:invisible">
           <div>
+            <Fade delay={0.4}>
+
             <Newnav />
+            </Fade>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-
+import { Fade, Slide, JackInTheBox, Reveal, Zoom } from "react-awesome-reveal";
 
 const skill_data = [
   {}
@@ -11,8 +11,9 @@ export default function Skills() {
         <div className=" h-0.5 w-64 bg-purple-400 "></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-11">
-        <div>
+      <Zoom cascade>
 
+        <div>
           <ul className="skills-bar-container">
             <li className="p-6 my-6">
               <div className="progressbar-title">
@@ -165,6 +166,7 @@ export default function Skills() {
             </li>
           </ul>
         </div>
+      </Zoom>
       </div>
     </div>
   )
