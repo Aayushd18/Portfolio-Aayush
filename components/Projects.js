@@ -18,7 +18,7 @@ export default function Projects() {
     {
       img: '/moviebrowser.png',
       title: 'Movie Browser',
-      details: 'A Movie Catalouge webstie to view details about movies around the world. Sourced by TMDB.',
+      details: 'A Movie Catalogue website to view details about movies around the world. Sourced by TMDB.',
       tags: ['React', 'CSS']
     },
     {
