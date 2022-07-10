@@ -1,8 +1,5 @@
-import { Fade, Slide, JackInTheBox, Reveal, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
-const skill_data = [
-  {}
-]
 export default function Skills() {
   return (
     <div className="flex flex-col items-center ml-11 pl-3 pr-6" id="skills">

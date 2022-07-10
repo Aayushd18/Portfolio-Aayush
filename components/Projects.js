@@ -1,4 +1,4 @@
-import { Fade, Slide, JackInTheBox, Reveal, Bounce, Rotate, Hinge, AttentionSeeker } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 export default function Projects() {
 
   const projectsData = [

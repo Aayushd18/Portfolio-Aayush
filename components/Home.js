@@ -4,11 +4,10 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import {
-  faArrowDown
-} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link'
-import { Fade, Slide, JackInTheBox, Reveal, Bounce, Rotate, Hinge, AttentionSeeker } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal"
+import Typewriter from 'typewriter-effect';
+
 
 
 
@@ -53,13 +52,26 @@ export function Home() {
 
               <h1 className="text-lg md:text-5xl greeting pl-6">Good To See You Here! 👋 </h1>
             </Slide>
-            <AttentionSeeker effect='rubberBand' duration={1500}>
-            <h1 className=" text-3xl md:text-7xl text-purple-400 pl-6">I am Aayush Deshmukh</h1>
-            </AttentionSeeker>
-            <Slide direction='right'>
-
-            <h1 className='profession text-md md:text-xl pl-6'>CODER | WEB3 DEVELOPER | FULL STACK DEVELOPER</h1>
+            <Slide direction='right' duration={1500}>
+            
+            <h1 className=" text-3xl md:text-7xl text-purple-400 pl-6">I'm Aayush Deshmukh</h1>
             </Slide>
+            <h1 className='profession text-xl md:text-4xl pl-6'>
+            <Typewriter
+              options={{
+                strings: ["A full stack developer", "A web3 developer", "Follow my Twitter", "Wanna play chess?"],
+                autoStart: true,
+                loop: true,
+                delay: "100",
+              }}
+            />
+            </h1>
+          </div>
+
+          <div className='flex items-start ml-7 flex-col justify-center mt-10 text-white'>
+            <button
+             className="bg-transparent hover:bg-purple-500 text-purple-400 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
+             ><Link target='_blank' href='https://drive.google.com/file/d/1v--atwakizbfZVPaJhmXHfLWSQ8h7pGE/view?usp=sharing/' >View Resume</Link></button>
           </div>
         </div>
         <Slide direction="up" triggerOnce>

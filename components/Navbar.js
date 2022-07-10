@@ -1,16 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import Image from "next/image"
 import { Newnav } from '../components/Newnav';
 import React, { useState } from "react";
-import { Fade, Slide, JackInTheBox, Reveal, Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 
 export function Navbar({ colorTheme, setTheme }) {
 
   const [colorChange, setColorchange] = useState(true);
-  const [darkmode, setDarkmode] = useState(false);
   const changeNavbarColor = () => {
     // console.log(window.scrollY)
     if(window.scrollY >= 66){
@@ -54,11 +50,6 @@ export function Navbar({ colorTheme, setTheme }) {
           <div className="pages-nav__item lg:mx-5 hidden md:flex">
             <a className="link link--page cursor-pointer" href="#contact">Contact Me</a>
           </div>
-            {/* <label onClick={toggleDarkmode} htmlFor="toggle-example" className="hidden md:flex items-center cursor-pointer relative ">
-              <input type="checkbox" id="toggle-example" className="sr-only" />
-              <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-              <span className="ml-3 text-white text-sm font-medium link link--page">Toggle me</span>
-            </label> */}
         </div>
         <div className="visible md:invisible">
           <div>
