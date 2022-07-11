@@ -39,8 +39,8 @@ export default function Contact() {
                   <input type="text" id="name" name="name" onChange={(e)=>{setName(e.target.value)}} className="input-box shadow-lg  p-2 bg-transparent border-b-4 focus:border-2 focus:rounded-lg outline-none" required />
                 </div>
                 <div className=" text-white flex flex-col my-8">
-                  <label htmlFor="phone" className="mb-3 text-lg"> Phone Number</label>
-                  <input type="text" id="phone" name="phone" onChange={(e)=>{setPhone(e.target.value)}} className="input-box shadow-lg  p-2 bg-transparent border-b-4 focus:border-2 focus:outline-none focus:rounded-lg outline-none" required />
+                  <label htmlFor="phone" className="mb-3 text-lg"> Phone Number (Optional)</label>
+                  <input type="text" id="phone" name="phone" onChange={(e)=>{setPhone(e.target.value)}} className="input-box shadow-lg  p-2 bg-transparent border-b-4 focus:border-2 focus:outline-none focus:rounded-lg outline-none" />
                 </div>
                 <div className=" text-white flex flex-col my-8">
                   <label htmlFor="email" className="mb-3 text-lg">Your Email Address</label>
