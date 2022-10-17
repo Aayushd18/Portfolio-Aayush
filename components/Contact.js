@@ -61,12 +61,6 @@ export default function Contact() {
           <Slide direction="up">
 
             <h1 className=" font-bold text-3xl text-purple-900 border-b-2 pb-2 text-center">Contact Me @</h1>
-            
-            <div className="flex items-center justify-center">
-              
-                  <FontAwesomeIcon icon={faPhoneAlt} color='lightpink'  className='mt-7 mr-3 glyphicon' />
-                  <span className="text-sm md:text-lg text-white mt-6 font-semibold text-center">Phone Number :- (+91) 782-827-9982</span>
-            </div>
             <div className="flex items-center justify-center">
               <Link href='https://www.google.com/gmail/' target='_blank'>
                 <a className="text-white font-semibold mt-3 text-center">
