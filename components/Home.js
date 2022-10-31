@@ -71,7 +71,7 @@ export function Home() {
           <div className='flex items-start ml-7 flex-col justify-center mt-10 text-white'>
             <button
              className="bg-transparent hover:bg-purple-500 text-purple-400 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
-             ><Link target='_blank' href='https://drive.google.com/file/d/1v--atwakizbfZVPaJhmXHfLWSQ8h7pGE/view?usp=sharing/' >View Resume</Link></button>
+             ><Link target='_blank' href='https://drive.google.com/file/d/1_npcK8mE4LPKnoBE4MHtlR2nEujj93Q-/view?usp=sharing' >View Resume</Link></button>
           </div>
         </div>
         <Slide direction="up" triggerOnce>
